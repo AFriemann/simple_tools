@@ -1,0 +1,20 @@
+language: python
+python:
+    - "2.7"
+    - "3.4"
+install:
+    - pip install -r requirements.txt
+    - pip install .
+script:
+    - py.test tests
+    - py.test --doctest-module README.rst
+deploy:
+    - provider: pypi
+      distributions: sdist
+      user: afriemann
+      password:
+        secure: "@FIXME"
+      on:
+        branch: master
+        tags: true
+        condition: $TRAVIS_PYTHON_VERSION = "3.4"
