@@ -1,20 +1,20 @@
 language: python
 python:
-    - "2.7"
-    - "3.4"
+- '2.7'
+- '3.4'
 install:
-    - pip install -r requirements.txt
-    - pip install .
+- pip install .
 script:
-    - py.test tests
-    - py.test --doctest-module README.rst
+- py.test tests
+- py.test --doctest-module README.rst
 deploy:
-    - provider: pypi
-      distributions: sdist
-      user: afriemann
-      password:
-        secure: "@FIXME"
-      on:
-        branch: master
-        tags: true
-        condition: $TRAVIS_PYTHON_VERSION = "3.4"
+  matrix:
+  - provider: pypi
+    distributions: sdist
+    user: afriemann
+    on:
+      branch: master
+      tags: true
+      condition: $TRAVIS_PYTHON_VERSION = "3.4"
+  password:
+    secure: g16174y1OsaFmdctqaEyGfiuyWqR0hYZPOhYUpw0/BeSJ1m5kC6gauVekUU/dRKKGlbhjuWjHY14SCk7pWCc/nOu2dKlEcI0ZSDXM0OnJxaw83CB3bpGIdPvXOexfDjxhedOm5TNdLV37UbUV+x0x823OkbFRZD2vVV00faX27FQZiQYd3vYhqMqcsdWX67mIUxZdAJ3z0x3ofpIFdGvMhLWwGRP6WDN89pfkjN3/sV9780/7KRJpunOrNYaZOBnstAL1eymr0FddWF0a2BVClE2BHFdH0fPg48hcC3iHD8xDT4T96MSeAroyeT/Tz9KB7t84PI765DC0NpmATlRNjSKM5o+vEf3NRmL/y/Z69gDc65xFZeYWDk7xzInHe0YZx1Yf2nWJF33lk8DJDGaVZdXGUlDtoLQUjlPuRILWKbMHzWnZHGMBNknDjji8pT38rJ0tekm2H05SnNFfsF01eQ7Pfz2zPiJIPSEt/2oG9foGsk918uvc9zIzmZhWq2MsAi/vGBRjomTdRWtLvBJylk6+cp94wgyPJSb14qFca6wcIVTDKhzJT6hrg79mvhMa+KKx+lcadOkY9FgP2biAJ8GHk80xaDdrRkWdTFbytAauLQfSLVDyRoSvKRs6XQlFLVREo228NKwxS25j+dLlorSg467DrL/Mzl0gTl8N5s=
