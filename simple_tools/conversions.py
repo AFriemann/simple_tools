@@ -1,4 +1,3 @@
-#! /usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
 .. module:: TODO
@@ -9,7 +8,14 @@
 
 """
 
+from simple_tools.regex import true, false
+
 def str2bool(s):
-    return str(s).lower() in [ 'y', 'yes', 'true', '1' ]
+    s = s if s is not None else ''
+
+    if true.match(s): return True
+    elif false.match(s): return False
+    else:
+        raise ValueError("Value '{}' is not valid for boolean conversion.")
 
 # vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4 fenc=utf-8
