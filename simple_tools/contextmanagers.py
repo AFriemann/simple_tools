@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-.. module:: TODO
+.. module:: simple_tools.contextmanagers
    :platform: Unix
    :synopsis: TODO.
 
