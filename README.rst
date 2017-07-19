@@ -6,6 +6,10 @@ Simple Tools
 
 A collection of various snippets and tools that come up regularly.
 
+.. code:: python
+
+    >>> from mock import Mock
+
 decorators
 ----------
 
@@ -37,3 +41,14 @@ regular expressions
     >>> for value in ('y', 'yE', 'tru', 'True', '1'):
     ...     assert true.match(value)
 
+lists
+-----
+
+.. code:: python
+
+    >>> from simple_tools.lists import find
+
+    >>> l = [Mock(a=1, b=1), Mock(a=2), Mock(a=1, b=2)]
+
+    >>> find(lambda e: e.a == 1, l).b == 1
+    True
