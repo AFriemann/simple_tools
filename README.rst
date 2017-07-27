@@ -52,3 +52,21 @@ lists
 
     >>> find(lambda e: e.a == 1, l).b == 1
     True
+
+strings
+-------
+
+.. code:: python
+
+    >>> from simple_tools.strings import compact
+
+    >>> s = "a multiline string\n \n   \nwith serveral\nunnecessary\n\n linebreaks"
+
+    >>> print(compact(s))
+    a multiline string
+    with serveral
+    unnecessary
+     linebreaks
+
+
+
