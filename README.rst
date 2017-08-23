@@ -3,6 +3,9 @@ Simple Tools
 
 .. image:: https://travis-ci.org/AFriemann/simple_tools.svg?branch=master
     :target: https://travis-ci.org/AFriemann/simple_tools
+.. image:: https://badge.fury.io/py/simple_tools.svg
+    :target: https://badge.fury.io/py/simple_tools
+
 
 A collection of various snippets and tools that come up regularly.
 
