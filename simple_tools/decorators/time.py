@@ -9,7 +9,7 @@
 
 """
 
-from concurrent.futures import ThreadPoolExecutor, wait, TimeoutError
+from concurrent.futures import ThreadPoolExecutor, TimeoutError
 
 from simple_tools.exceptions import TimeoutException
 
