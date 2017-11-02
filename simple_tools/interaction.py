@@ -25,4 +25,10 @@ def confirm(question, default=True):
     else:
         return default
 
+def collect(resource, default=None):
+    if default is not None:
+        return input('{} [{}]: '.format(resource, default)) or default
+    else:
+        return input('{}: '.format(resource))
+
 # vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4 fenc=utf-8
