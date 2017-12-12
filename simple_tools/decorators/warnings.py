@@ -7,7 +7,9 @@
 .. moduleauthor:: Aljosha Friemann a.friemann@automate.wtf
 """
 
-import warnings, functools
+import warnings
+import functools
+
 
 def deprecated(function):
     @functools.wraps(function)

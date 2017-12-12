@@ -34,6 +34,22 @@ timeout
         ...
     TimeoutException: execution of <function long_running_task at ...> timed out after 3s
 
+errors
+~~~~~~
+
+.. code:: python
+
+    >>> from simple_tools.decorators.errors import not_implemented
+
+    >>> @not_implemented
+    ... def some_method():
+    ...     pass
+
+    >>> some_method() # doctest: +ELLIPSIS +IGNORE_EXCEPTION_DETAIL
+    Traceback (most recent call last):
+        ...
+    NotImplementedError
+
 regular expressions
 -------------------
 
