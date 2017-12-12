@@ -87,5 +87,15 @@ strings
     unnecessary
      linebreaks
 
+www
+---
+
+.. code:: python
+
+    >>> from simple_tools.www import url
+
+    >>> url.join('http://example.org', 'foo', 'bar', baz='bam')
+    'http://example.org/foo/bar?baz=bam'
+
 
 
