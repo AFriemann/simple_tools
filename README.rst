@@ -97,5 +97,15 @@ www
     >>> url.join('http://example.org', 'foo', 'bar', baz='bam')
     'http://example.org/foo/bar?baz=bam'
 
+files
+-----
 
+.. code:: python
+
+  >>> from simple_tools.files import walk_up
+
+  >>> for root, parent, files in walk_up('/tmp'):
+  ...   print('%s -> %s' % (root, parent))
+  /tmp -> /
+  / -> /
 
