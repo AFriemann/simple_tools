@@ -9,6 +9,7 @@
 
 """
 
+
 class TimeoutException(RuntimeError):
     def __init__(self, seconds, function):
         self._seconds_ = seconds

@@ -10,6 +10,7 @@
 
 import os
 
+
 def compact(string):
     return os.linesep.join([s for s in string.splitlines() if s.strip()])
 

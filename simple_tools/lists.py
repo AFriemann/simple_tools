@@ -8,8 +8,10 @@
 
 """
 
+
 def find(function, lst):
     for element in lst:
         if function(element):
             return element
 
+# vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4 fenc=utf-8

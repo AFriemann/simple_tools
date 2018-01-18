@@ -10,8 +10,10 @@
 
 from simple_tools.regex import yes, no
 
+
 def confirm(question, default=True):
-    prompt = "{} {}/{} ".format(question,
+    prompt = "{} {}/{} ".format(
+        question,
         '[y]' if default else 'y',
         '[n]' if not default else 'n'
     )
@@ -24,6 +26,7 @@ def confirm(question, default=True):
         return False
     else:
         return default
+
 
 def collect(resource, default=None):
     if default is not None:

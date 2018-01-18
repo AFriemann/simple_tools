@@ -10,14 +10,18 @@
 
 from simple_tools.regex import true, false
 
+
 def bool2str(b):
     return 'yes' if b else 'no'
+
 
 def str2bool(s):
     s = s if s is not None else ''
 
-    if true.match(s): return True
-    elif false.match(s): return False
+    if true.match(s):
+        return True
+    elif false.match(s):
+        return False
     else:
         raise ValueError("Value '{}' is not valid for boolean conversion.")
 

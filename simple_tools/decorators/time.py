@@ -13,6 +13,7 @@ from concurrent.futures import ThreadPoolExecutor, TimeoutError
 
 from simple_tools.exceptions import TimeoutException
 
+
 def timeout(seconds):
     def timed_function(f):
         def new_function(*args, **kwargs):

@@ -9,12 +9,12 @@
 
 """
 
+
 def walk(dictionary, root='.'):
     for key, value in dictionary.items():
         if type(value) is dict:
-            for subkey, subvalue in walk(value, root+'.'+key):
+            for subkey, subvalue in walk(value, root + '.' + key):
                 yield subkey, subvalue
-            #yield from walk(value, root+'.'+key)
         else:
             yield key, value
 
