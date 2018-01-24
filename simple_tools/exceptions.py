@@ -9,6 +9,11 @@
 
 """
 
+import logging
+
+
+LOGGER = logging.getLogger(__name__)
+
 
 class TimeoutException(RuntimeError):
     def __init__(self, seconds, function):
@@ -17,5 +22,12 @@ class TimeoutException(RuntimeError):
 
     def __str__(self):
         return "execution of {} timed out after {}s".format(self._function_, self._seconds_)
+
+
+def catch(exception, function, *args, **kwargs):
+    try:
+        return function(*args, **kwargs)
+    except exception as e:
+        LOGGER.debug("caught exception %s", e)
 
 # vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4 fenc=utf-8
