@@ -3,6 +3,7 @@
 reports
 sdist
 dist
+.pytest_cache
 .tox
 .cache
 .coverage
